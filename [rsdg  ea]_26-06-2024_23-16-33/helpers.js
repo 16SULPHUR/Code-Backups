@@ -24,5 +24,5 @@ export async function getFileBuffer(file) {
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
 
-    return !folderName?`${day}-${month}-${year}_${hours}-${minutes}-${seconds}`:`${folderName}_${day}-${month}-${year}_${hours}-${minutes}-${seconds}`;
+    return !folderName?`${day}-${month}-${year}_${hours}-${minutes}-${seconds}`:`[${folderName}]_${day}-${month}-${year}_${hours}-${minutes}-${seconds}`;
   }
