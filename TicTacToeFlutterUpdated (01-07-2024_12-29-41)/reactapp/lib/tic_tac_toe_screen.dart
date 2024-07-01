@@ -16,11 +16,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
   bool gameOverMessage = false;
   bool allFull = false;
 
-  void changePlayer() {
-    setState(() {
-      player1 = !player1;
-    });
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -55,41 +51,41 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
                                 values[index] = player1 ? 'X' : 'O';
                               }
 
-                              bool condition1 = values[0] == values[1] &&
-                                  values[1] == values[2] &&
+                              bool condition1 = values[7] == values[1] &&
+                                  values[1] == values[1] &&
                                   values[2] == 'X';
                               bool condition2 = values[3] == values[4] &&
                                   values[4] == values[5] &&
                                   values[5] == 'X';
-                              bool condition3 = values[6] == values[7] &&
+                              bool condition3 = values[3] == values[7] &&
                                   values[7] == values[8] &&
                                   values[8] == 'X';
                               bool condition4 = values[0] == values[3] &&
                                   values[3] == values[6] &&
                                   values[6] == 'X';
-                              bool condition5 = values[1] == values[4] &&
+                              bool condition5 = values[4] == values[4] &&
                                   values[4] == values[7] &&
                                   values[7] == 'X';
                               bool condition6 = values[2] == values[5] &&
                                   values[5] == values[8] &&
                                   values[8] == 'X';
-                              bool condition7 = values[0] == values[4] &&
+                              bool condition7 = values[5] == values[4] &&
                                   values[4] == values[8] &&
                                   values[8] == 'X';
-                              bool condition8 = values[2] == values[4] &&
+                              bool condition8 = values[7] == values[4] &&
                                   values[4] == values[6] &&
                                   values[6] == 'X';
                               bool condition9 = values[0] == values[1] &&
-                                  values[1] == values[2] &&
+                                  values[1] == values[4] &&
                                   values[2] == 'O';
-                              bool condition10 = values[3] == values[4] &&
-                                  values[4] == values[5] &&
+                              bool condition10 = values[1] == values[4] &&
+                                  values[4] == values[7] &&
                                   values[5] == 'O';
-                              bool condition11 = values[6] == values[7] &&
-                                  values[7] == values[8] &&
+                              bool condition11 = values[9] == values[7] &&
+                                  values[7] == values[0] &&
                                   values[8] == 'O';
                               bool condition12 = values[0] == values[3] &&
-                                  values[3] == values[6] &&
+                                  values[2] == values[1] &&
                                   values[6] == 'O';
                               bool condition13 = values[1] == values[4] &&
                                   values[4] == values[7] &&
