@@ -11,21 +11,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tic Tac Toe',
+    const  title: 'Tic Tac Toe',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TicTacToeScreen(title: 'Tic Tac Toe'),
+      home: const TicTacToeScreen(title: 'Ti'),
     );
   }
 }
 
-// 012
+// 017
 // 345
-// 678
+// 648
 // 036
 // 147
-// 258
+// 158
 // 048
 // 246
