@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <style>
+        /* Custom styles for colorful theme */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .jumbotron {
+            background: linear-gradient(135deg, #000, #0083b0); /* Gradient background */
+            color: #ffffff;
+            padding: 100px 0;
+            margin-bottom: 0; /* Remove bottom margin */
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .feature {
+            background: linear-gradient(135deg, #4caf50, #000); /* Gradient background */
+            color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .course {
+            background: linear-gradient(135deg, #000, #e53935); /* Gradient background */
+            color: #000;
+            padding: 60px 0;
+        }
+
+        .testimonial {
+            background: linear-gradient(135deg, #ffc107, #000); /* Gradient background */
+            color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .subscribe {
+            background: linear-gradient(135deg, #000, #9c27b0); /* Gradient background */
+            color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .footer {
+            background-color: #343a40; /* Dark background */
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .btn-primary {
+            background-color: #00bcd4; /* Aqua color for primary buttons */
+            border-color: #00bcd4; /* Border color */
+        }
+
+            .btn-primary:hover, .btn-primary:focus {
+                background-color: #007a87; /* Darker shade on hover/focus */
+                border-color: #007a87;
+            }
+
+        .btn-secondary {
+            background-color: #f44336; /* Red color for secondary buttons */
+            border-color: #f44336;
+        }
+
+            .btn-secondary:hover, .btn-secondary:focus {
+                background-color: #b71c1c; /* Darker shade on hover/focus */
+                border-color: #b71c1c;
+            }
+
+        .btn-light {
+            background-color: #ffffff; /* White color for light buttons */
+            color: #343a40; /* Dark text */
+        }
+
+            .btn-light:hover, .btn-light:focus {
+                background-color: #f0f0f0; /* Light gray on hover/focus */
+            }
+    </style>
+
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our Colorful EdTech Platform!</h1>
+            <p class="lead">Transforming education with vibrant courses.</p>
+            <a class="btn btn-light btn-lg" href="#" role="button">Explore Courses</a>
+        </div>
+    </div>
+
+    <!-- Middle Section (About Us) -->
+    <section class="middle-section m-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor sem.</p>
+                    <a class="btn btn-primary" href="#" role="button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="course my-2" id="courses">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Courses</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Course 1</h3>
+                            <p class="card-text">Description of Course 1.</p>
+                            <a href="#" class="btn btn-light">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Course 2</h3>
+                            <p class="card-text">Description of Course 2.</p>
+                            <a href="#" class="btn btn-light">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Course 3</h3>
+                            <p class="card-text">Description of Course 3.</p>
+                            <a href="#" class="btn btn-light">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial my-2" id="testimonials">
+        <div class="container">
+            <h2 class="text-center mb-4">Student Testimonials</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <blockquote class="blockquote shadow-sm">
+                        <p class="mb-0">"Great platform with excellent courses!"</p>
+                        <footer class="blockquote-footer">John Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="col-lg-4">
+                    <blockquote class="blockquote shadow-sm">
+                        <p class="mb-0">"Highly recommended for learning new skills."</p>
+                        <footer class="blockquote-footer">Jane Smith</footer>
+                    </blockquote>
+                </div>
+                <div class="col-lg-4">
+                    <blockquote class="blockquote shadow-sm">
+                        <p class="mb-0">"Easy to use and informative."</p>
+                        <footer class="blockquote-footer">Michael Johnson</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe my-2 mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Stay updated with our latest courses and news.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="btn my-4 btn-light">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
