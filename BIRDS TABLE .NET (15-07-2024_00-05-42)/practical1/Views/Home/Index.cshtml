@@ -1,0 +1,170 @@
+﻿@model List<Bird>
+
+@{
+    ViewData["Title"] = "Birds of India";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .bird-table {
+        background-color: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+        .bird-table thead {
+            background: linear-gradient(45deg, #FF9933, #FFFFFF, #138808);
+            color: #000080;
+            font-weight: bold;
+        }
+
+        .bird-table th, .bird-table td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .bird-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .bird-table tbody tr:hover {
+            background-color: #e6e6e6;
+            transition: background-color 0.3s ease;
+        }
+
+    .conservation-status {
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .least-concern {
+        background-color: #138808;
+    }
+
+    .vulnerable {
+        background-color: #FF9933;
+    }
+
+    .page-title {
+        color: #000080;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .bird-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #FF9933;
+        cursor: pointer;
+    }
+
+    .popover {
+        max-width: 400px;
+    }
+
+    .popover-body {
+        padding: 0;
+    }
+
+    .bird-card {
+        width: 100%;
+        border: none;
+    }
+
+    .bird-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .bird-card-body {
+        padding: 15px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4 page-title">Birds of India</h1>
+    <div class="table-responsive">
+        <table class="table bird-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Hindi Name</th>
+                    <th>Species</th>
+                    <th>Region</th>
+                    <th>Conservation Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bird in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="@bird.ImageUrl"
+                                 alt="@bird.Name"
+                                 class="bird-image"
+                                 data-bs-toggle="popover"
+                                 data-bs-trigger="click"
+                                 data-bs-content="<div class='card bird-card'>
+                                <img src='@bird.ImageUrl' class='card-img-top bird-card-img' alt='@bird.Name'>
+                                <div class='card-body bird-card-body'>
+                                    <h5 class='card-title'>@bird.Name (@bird.HindiName)</h5>
+                                    <p class='card-text'><strong>Species:</strong> @bird.Species</p>
+                                    <p class='card-text'><strong>Region:</strong> @bird.Region</p>
+                                    <p class='card-text'>
+                                        <strong>Conservation Status:</strong>
+                                        <span class='conservation-status @(bird.ConservationStatus.ToLower().Replace(" ", "-"))'>
+                            @bird.ConservationStatus
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>"
+                            onerror="this.onerror=null;this.src='https://via.placeholder.com/150?text=@bird.Name';" />
+                        </td>
+                        <td>@bird.Name</td>
+                        <td>@bird.HindiName</td>
+                        <td><i>@bird.Species</i></td>
+                        <td>@bird.Region</td>
+                        <td>
+                            <span class="conservation-status @(bird.ConservationStatus.ToLower().Replace(" ", "-"))">
+                                @bird.ConservationStatus
+                            </span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl, {
+                html: true,
+                sanitize: false,
+                placement: 'auto'
+            });
+        });
+
+        // Close other popovers when a new one is opened
+        document.body.addEventListener('click', function (e) {
+            popoverList.forEach(function (popover) {
+                if (!popover._element.contains(e.target) && document.body.contains(e.target)) {
+                    popover.hide();
+                }
+            });
+        });
+    });
+</script>
