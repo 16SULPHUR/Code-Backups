@@ -1,0 +1,1 @@
+ /home/amtics/Desktop/202203103510203/FLUTTER/practical_4/.dart_tool/flutter_build/28ac434f73c280587d08f8ff29528a0b/native_assets.yaml: 
