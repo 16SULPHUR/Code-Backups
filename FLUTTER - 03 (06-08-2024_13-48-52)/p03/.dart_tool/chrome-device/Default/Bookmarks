@@ -1,0 +1,129 @@
+{
+   "checksum": "62294e761bbbb535ffcd4b84d7dbacec",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13367086181299324",
+            "date_last_used": "0",
+            "guid": "eafbc27f-c363-44f9-ae4f-71b4e7f9d66f",
+            "id": "7",
+            "name": "McAfee Security",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/dell.html"
+         }, {
+            "children": [ {
+               "date_added": "13310725015231899",
+               "date_last_used": "0",
+               "guid": "adcf19a0-b5cd-435e-b003-a516158d3369",
+               "id": "9",
+               "name": "Dell Auction",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www.dellauction.com/"
+            }, {
+               "date_added": "13310725015231899",
+               "date_last_used": "0",
+               "guid": "78cb6579-43d6-47a7-9466-e9e7e0724cc0",
+               "id": "11",
+               "name": "Dell",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www1.ap.dell.com/content/default.aspx?c=in&l=en&s=gen"
+            }, {
+               "date_added": "13310725015231899",
+               "date_last_used": "0",
+               "guid": "89f6ab58-813a-4cad-bc2b-cf17eaf77d63",
+               "id": "13",
+               "name": "Support.Dell.Com",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www.dell.com/support/home"
+            } ],
+            "date_added": "13367086184106703",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "e416c2f1-4b66-40b2-af6f-2830c0c50424",
+            "id": "8",
+            "name": "Dell",
+            "source": "import_fre",
+            "type": "folder"
+         }, {
+            "date_added": "13314003709332525",
+            "date_last_used": "0",
+            "guid": "a42f88ed-4092-4ba9-b77b-bdd6ff127a33",
+            "id": "14",
+            "name": "Ìàãàçèí ôóòàæåé",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "http://12dvd.ru/"
+         }, {
+            "date_added": "13314003709329940",
+            "date_last_used": "0",
+            "guid": "92c859d7-535a-4e24-a0c8-cffd04ae2be5",
+            "id": "15",
+            "name": "ÔÓÒÀÆÈ ÑÊÀ×ÀÒÜ",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "http://footage.3dn.ru/"
+         }, {
+            "date_added": "13314003709332525",
+            "date_last_used": "0",
+            "guid": "1ecd0bdc-2fb3-4843-9e14-6033a7c429c5",
+            "id": "16",
+            "name": "Ôóòàæè DVD ñêà÷àòü",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "http://fonov.net/"
+         }, {
+            "date_added": "13314003709325662",
+            "date_last_used": "0",
+            "guid": "687fbd46-f162-4300-94f6-9e8b87e1b5c8",
+            "id": "17",
+            "name": "Ôóòàæè Ïðîãðàììû Øàáëîíû PSD",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "http://otpisok.net/"
+         } ],
+         "date_added": "13367086181075627",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13367086181075631",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13367086181075632",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
