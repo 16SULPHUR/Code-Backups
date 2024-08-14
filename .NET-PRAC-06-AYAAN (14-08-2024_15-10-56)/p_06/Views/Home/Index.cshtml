@@ -1,0 +1,33 @@
+﻿
+<style>
+    .main{
+        background-color: rgb(231, 231, 231);
+    
+    }
+    .card{
+        border:1px solid black;
+        padding: 3px;
+         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center main">
+    <h1 class="display-4">EMPLOYEE DETAILS</h1>
+    @foreach(var employee in @ViewBag.employees){
+        <div class="card">
+        <p>@employee.Name</p>
+        <p>@employee.Age</p>
+        <p>@employee.Salary</p>
+        <p>@employee.Email</p>
+        <p>@employee.role</p>
+
+        </div>
+
+    }
+   
+</div>
