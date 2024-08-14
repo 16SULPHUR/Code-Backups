@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Include custom styles for Japanese-inspired theme -->
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #f5f5f5; /* Light background color */
+        color: #333; /* Dark text color for readability */
+    }
+
+    .container {
+        max-width: 1200px; /* Centered container with max width */
+    }
+
+    .card {
+        background: #fff; /* White background for cards */
+        border: 1px solid #ddd; /* Light border for cards */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        margin-bottom: 20px; /* Spacing between cards */
+    }
+
+    .card-header {
+        background: #e0e0e0; /* Light gray background for card headers */
+        border-bottom: 1px solid #ddd; /* Subtle border for separation */
+        padding: 15px; /* Padding inside card header */
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: #333; /* Dark text color for titles */
+    }
+
+    .table {
+        margin-bottom: 0; /* Remove bottom margin from tables */
+    }
+
+    .table thead {
+        background: #f8f9fa; /* Light background for table headers */
+        color: #333; /* Dark text color */
+    }
+
+    .table tbody tr:hover {
+        background: #f1f1f1; /* Light hover effect for rows */
+    }
+
+    .table-bordered td, .table-bordered th {
+        border-color: #ddd; /* Light border color */
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="display-4 mb-4 text-center">Employees, Managers, and Clerks</h1>
+
+    <!-- Employees Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="card-title mb-0">Employees</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Employee e in ViewBag.Employees)
+                    {
+                        <tr>
+                            <td>@e.Name</td>
+                            <td>@e.Salary</td> <!-- Format as currency -->
+                            <td>@e.Id</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Managers Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="card-title mb-0">Managers</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Manager m in ViewBag.Managers)
+                    {
+                        <tr>
+                            <td>@m.Name</td>
+                            <td>@m.salary</td> <!-- Format as currency -->
+                            <td>@m.id</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Clerks Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="card-title mb-0">Clerks</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Clerk c in ViewBag.Clerks)
+                    {
+                        <tr>
+                            <td>@c.Name</td>
+                            <td>@c.salary</td> <!-- Format as currency -->
+                            <td>@c.id</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

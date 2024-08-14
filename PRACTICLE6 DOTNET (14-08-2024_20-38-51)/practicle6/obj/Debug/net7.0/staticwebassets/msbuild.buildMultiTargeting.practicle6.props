@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/practicle6.props" />
+</Project>
