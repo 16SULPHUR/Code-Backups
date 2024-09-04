@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<P_07.Models.Employee>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+   
+     @foreach (var employee in Model)
+    {
+        <p>ID: @employee.id, Name: @employee.name </p>
+    }
+    <p>@ViewBag.eligibility</p>
+</div>
