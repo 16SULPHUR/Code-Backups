@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p>Query String Value : @ViewBag.QueryValue</p>
+    <p>Session String Value : @ViewBag.SessionValue</p>
+
+    <form asp-action="SetSessionValue" method="post">
+        <input type="text" name="sessionValue" placeholder="Enter session value"/>
+        <button type="submit">Set Session Value</button>
+    </form>
+
+    <form asp-action="SetHiddenFieldValue" method="post">
+        <input type="text" name="hiddenValue" placeholder="Enter Hidden Value"/>
+        <button type="submit">Set Hidden Value</button>
+    </form>
+</div>
