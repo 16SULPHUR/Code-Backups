@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "User Input Cache";
+}
+
+<h2>Enter some text to cache the result</h2>
+<form method="post" asp-action="UserInput">
+    <input type="text" name="userInput" required />
+    <input type="submit" value="Submit" />
+</form>
