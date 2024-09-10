@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cookie Demo</h1>
+
+    <p>Current Cookie Value: @ViewData["CookieValue"]</p>
+
+    <!-- Form to set a custom cookie value -->
+    <form asp-action="SetCustomCookie" method="post">
+        <div class="form-group">
+            <label for="cookieValue">Enter Cookie Value:</label>
+            <input type="text" id="cookieValue" name="cookieValue"  />
+        </div>
+        <button type="submit">Set Cookie</button>
+    </form>
+
+</div>
