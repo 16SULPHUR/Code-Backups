@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Guess The Number";
+}
+
+<h2>Guess the Number Game</h2>
+<p>Try to guess the number between 1 and 100!</p>
+
+<form id="guessForm">
+    <input type="number" id="guessInput" name="guess" min="1" max="100" required />
+    <input type="submit" value="Submit Guess" />
+</form>
+
+<div id="resultMessage"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('guessForm');
+        const resultMessage = document.getElementById('resultMessage');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+
+            const guessValue = document.getElementById('guessInput').value;
+
+            fetch('/Home/Guess', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({ guess: guessValue })
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultMessage.textContent = data.message; // Display result message
+            })
+            .catch(error => {
+                resultMessage.textContent = 'An error occurred. Please try again.';
+            });
+        });
+    });
+</script>
